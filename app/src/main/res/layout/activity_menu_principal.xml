@@ -6,29 +6,49 @@
     android:orientation="vertical"
     tools:context="com.example.leo.tdm_ejercicio225_ivanleobardoestradasalinas.MenuPrincipal">
 
-    <FrameLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Bienvenido!"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione la opcion donde desea Ingresar"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icono"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        >
         <Button
             android:id="@+id/btnTrabajadores"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="trabajadores"/>
-    </FrameLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+            android:text="trabajadores"
+            android:layout_marginRight="40dp"/>
+
         <Button
             android:id="@+id/btnObras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Obras"/>
+            android:text="Obras"
+            android:layout_marginLeft="40dp"/>
+    </LinearLayout>
         <Button
             android:id="@+id/btnSalir"
             android:layout_width="wrap_content"
@@ -36,8 +56,9 @@
             android:layout_gravity="bottom|right"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
             android:text="Salir"/>
-    </FrameLayout>
+
 
 
 
