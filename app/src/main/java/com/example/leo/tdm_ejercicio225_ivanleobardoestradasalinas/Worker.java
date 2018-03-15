@@ -1,0 +1,41 @@
+package com.example.leo.tdm_ejercicio225_ivanleobardoestradasalinas;
+
+
+public class Worker {
+    int idTrabajador;
+    String nombreTrabajador;
+    String actividadTrabajador;
+    String celularTrabajador;
+
+    public int getIdTrabajador() {
+        return idTrabajador;
+    }
+
+    public void setIdTrabajador(int idTrabajador) {
+        this.idTrabajador = idTrabajador;
+    }
+
+    public String getNombreTrabajador() {
+        return nombreTrabajador;
+    }
+
+    public void setNombreTrabajador(String nombreTrabajador) {
+        this.nombreTrabajador = nombreTrabajador;
+    }
+
+    public String getActividadTrabajador() {
+        return actividadTrabajador;
+    }
+
+    public void setActividadTrabajador(String actividadTrabajador) {
+        this.actividadTrabajador = actividadTrabajador;
+    }
+
+    public String getCelularTrabajador() {
+        return celularTrabajador;
+    }
+
+    public void setCelularTrabajador(String celularTrabajador) {
+        this.celularTrabajador = celularTrabajador;
+    }
+}
