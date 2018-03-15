@@ -90,7 +90,7 @@ public class WorkerAdapter extends RecyclerView.Adapter<WorkerAdapter.MyViewHold
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                builder.setView(view1).setTitle("Edit Records").setNegativeButton("close", new DialogInterface.OnClickListener() {
+                builder.setView(view1).setTitle("Editar Registros").setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -121,7 +121,7 @@ public class WorkerAdapter extends RecyclerView.Adapter<WorkerAdapter.MyViewHold
 
                         _dbFunctions.UpdateWorker(_worker);
 
-                        Toast.makeText(activity, nombre + " updated.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Empleado "+ nombre + " Actualizado", Toast.LENGTH_SHORT).show();
                         ((Workers)activity).fetchWorkersRecords();
                         dialog.dismiss();
                     }
@@ -138,7 +138,7 @@ public class WorkerAdapter extends RecyclerView.Adapter<WorkerAdapter.MyViewHold
                     final int id = worker.getIdTrabajador();
                     _dbFunctions.DeleteWorker(id);
 
-                    Toast.makeText(activity,  " Eliminado...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity,  "Registro Eliminado", Toast.LENGTH_SHORT).show();
                     ((Workers)activity).fetchWorkersRecords();
                     //dialog.dismiss();
 

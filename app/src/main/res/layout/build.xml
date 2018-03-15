@@ -12,7 +12,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#fff">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,7 +93,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_toLeftOf="@+id/btnDelete"
                     android:layout_weight="1"
-                    android:drawableLeft="@android:drawable/ic_menu_edit"
+                    android:drawableLeft="@drawable/update"
                     android:padding="5dp" />
 
                 <TextView
@@ -102,7 +103,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/middlename"
                     android:layout_weight="1"
-                    android:drawableLeft="@android:drawable/ic_delete"
+                    android:drawableLeft="@drawable/delete"
                     android:padding="5dp"
                     android:textColor="@color/colorPrimary" />
             </LinearLayout>

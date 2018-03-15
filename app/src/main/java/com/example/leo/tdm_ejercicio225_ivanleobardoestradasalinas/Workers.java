@@ -47,8 +47,8 @@ public class Workers extends AppCompatActivity {
                 final Button btnSave = (Button) mView1.findViewById(R.id.btnGuardar);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Workers.this);
-                builder.setView(mView1).setTitle("Agregar un nuevo TRABAJADOR")
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setView(mView1).setTitle("Agregar un Nuevo Empleado")
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialog.dismiss();
@@ -65,12 +65,12 @@ public class Workers extends AppCompatActivity {
 
 
                         if (nombre.equals("") && actividad.equals("") && celular.equals("") ){
-                            Snackbar.make(view,"Espacios incompletos",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Campos Restantes",Snackbar.LENGTH_SHORT).show();
 
                         }else {
                             Save(nombre,actividad,celular);
                             dialog.dismiss();
-                            Snackbar.make(view,"Saving",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Guardando",Snackbar.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -124,7 +124,7 @@ public class Workers extends AppCompatActivity {
                 }adapter.notifyDataSetChanged();
 
             }else {
-                Toast.makeText(Workers.this, "No Records found.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Workers.this, "", Toast.LENGTH_SHORT).show();
             }
         }
         catch (Exception e){
@@ -143,7 +143,7 @@ public class Workers extends AppCompatActivity {
         worker.setCelularTrabajador(celular);
 
         dbfunctions.InsertWorker(worker);
-        Toast.makeText(this, "Guardado...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Registro Guardado", Toast.LENGTH_SHORT).show();
         fetchWorkersRecords();
     }
 }

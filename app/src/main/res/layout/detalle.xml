@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_gravity="center"
+    
     android:padding="10dp">
     <TextView
         android:id="@+id/txtNombre"
@@ -94,12 +95,10 @@
     <Button
         android:id="@+id/btnGuardar"
         android:layout_marginTop="10dp"
-        android:text="Save"
+        android:text="Guardar"
         android:drawableLeft="@android:drawable/ic_menu_save"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorAccent"
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </LinearLayout>

@@ -106,7 +106,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.MyView
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setView(mView1).setTitle("Editar Cliente")
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialog.dismiss();
@@ -129,7 +129,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.MyView
                         monto = edtMonto.getText().toString();
 
                         if (nombre.equals("") && direccion.equals("") && celular.equals("") && mail.equals("") && descripcio_obra.equals("") && monto.equals("") ){
-                            Snackbar.make(view,"Espacios incompletos",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Campos Restantes",Snackbar.LENGTH_SHORT).show();
 
                         }else {
                             //Save(nombre,direccion,celular,mail,descripcio_obra,monto,estado);
@@ -142,7 +142,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.MyView
                             b.setDescripcionObraCliente(descripcio_obra);
                             b.setMontoCliente(monto);
                             dbfunction.UpdateBuilding(b);
-                            Snackbar.make(view,"Saving",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Guardando",Snackbar.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
                     }
@@ -159,7 +159,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.MyView
                 final int id = build.getIdCliente();
                 _dbFunctions.DeleteBuilding(id);
 
-                Toast.makeText(activity,  " Eliminado...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity,  "Registro Eliminado", Toast.LENGTH_SHORT).show();
                 ((Buildings)activity).fetchBuildingsRecords();
             }
         });

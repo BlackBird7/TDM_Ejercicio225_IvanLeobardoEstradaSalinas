@@ -32,16 +32,16 @@ Button btnSalir, btnObras, btnTrabajadores;
             }
         });
 
-        btnSalir.setOnClickListener(new View.OnClickListener() {
+        /*btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
     }
 
     void fnStrartingButtons(){
-        btnSalir = findViewById(R.id.btnSalir);
+        //btnSalir = findViewById(R.id.btnSalir);
         btnObras = findViewById(R.id.btnObras);
         btnTrabajadores = findViewById(R.id.btnTrabajadores);
     }

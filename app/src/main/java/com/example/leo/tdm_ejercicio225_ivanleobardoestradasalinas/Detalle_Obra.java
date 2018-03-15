@@ -56,7 +56,7 @@ public class Detalle_Obra extends AppCompatActivity {
             @Override
             public void onItemClick(final int position) {
                 //SE INFLA EL EDIT
-                Toast.makeText(Detalle_Obra.this, "ssssssssss", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Detalle_Obra.this, "", Toast.LENGTH_SHORT).show();
                 LayoutInflater inflater = getLayoutInflater();
                 View mView1 = inflater.inflate(R.layout.detalle_edit,null);
                 final BaseDatos dbFunctions = new BaseDatos(Detalle_Obra.this);
@@ -109,7 +109,7 @@ public class Detalle_Obra extends AppCompatActivity {
 
                         }else {
                             Update(idCliente,idTrabajador,fechaIni,fechFin,cantidad,pago);
-                            Snackbar.make(view,"Updating",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Actualizando",Snackbar.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
                     }
@@ -118,7 +118,7 @@ public class Detalle_Obra extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                       dbFunctions.DeletDetail(idCliente,idTrabajador);
-                        Snackbar.make(v,"Deletting",Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(v,"Eliminando",Snackbar.LENGTH_SHORT).show();
                         fetchDetailsRecords();
                         adapterDetalle.notifyDataSetChanged();
                         dialog.dismiss();
@@ -152,8 +152,8 @@ public class Detalle_Obra extends AppCompatActivity {
                 btnGuardar = mView1.findViewById(R.id.btnGuardar);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Detalle_Obra.this);
-                builder.setView(mView1).setTitle("Agregar un trabajador")
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setView(mView1).setTitle("Agregar un Trabajador")
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialog.dismiss();
@@ -174,11 +174,11 @@ public class Detalle_Obra extends AppCompatActivity {
                         int idTrabajador = workerList.get(position).getIdTrabajador();
 
                         if (fechaIni.equals("") || fechFin.equals("") || cantidad.equals("") || pago.equals("")){
-                            Snackbar.make(view,"Espacios incompletos",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Campos Restantes",Snackbar.LENGTH_SHORT).show();
 
                         }else {
                             Save(idCliente,idTrabajador,fechaIni,fechFin,cantidad,pago);
-                            Snackbar.make(view,"Saving",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Guardando",Snackbar.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
                     }
@@ -201,7 +201,7 @@ public class Detalle_Obra extends AppCompatActivity {
             detalle.setPaga(pago);
             detalle.setCantidad(cant);
             dbfunctions.UpdateDetail(detalle);
-            Toast.makeText(this, "Actualizando...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registro Actualizado", Toast.LENGTH_SHORT).show();
             fetchDetailsRecords();
         }catch (Exception e){
             Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
@@ -212,7 +212,7 @@ public class Detalle_Obra extends AppCompatActivity {
         try {
             BaseDatos dbfunctions = new BaseDatos(Detalle_Obra.this);
             dbfunctions.InsertDetalle(id1,id2,fechaIni,fechaFin,cantidad,pago);
-            Toast.makeText(this, "Guardado...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registro Guardado", Toast.LENGTH_SHORT).show();
             fetchDetailsRecords();
         }catch (Exception e){
             Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
@@ -255,7 +255,7 @@ public class Detalle_Obra extends AppCompatActivity {
                 }adapter.notifyDataSetChanged();
 
             }else {
-                Toast.makeText(Detalle_Obra.this, "No Records found.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Detalle_Obra.this, "No Se Encontraron Registros", Toast.LENGTH_SHORT).show();
             }
         }
         catch (Exception e){
@@ -300,7 +300,7 @@ public class Detalle_Obra extends AppCompatActivity {
                 }adapterDetalle.notifyDataSetChanged();
 
             }else {
-                Toast.makeText(Detalle_Obra.this, "No Records found.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Detalle_Obra.this, "No se encontraron Registros", Toast.LENGTH_SHORT).show();
             }
         }
         catch (Exception e){

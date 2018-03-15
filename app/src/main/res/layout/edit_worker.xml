@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
 
 
     <TextView
@@ -45,20 +47,22 @@
         android:padding="5dp"
         android:textSize="16dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
 
     <EditText
         android:id="@+id/edtCelular"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="phone"/>
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_marginTop="10dp"
-        android:text="Guardar cambios"
-        android:padding="5dp"
-        android:layout_gravity="center_horizontal"
+        android:text="Guardar"
+        android:drawableLeft="@android:drawable/ic_menu_save"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

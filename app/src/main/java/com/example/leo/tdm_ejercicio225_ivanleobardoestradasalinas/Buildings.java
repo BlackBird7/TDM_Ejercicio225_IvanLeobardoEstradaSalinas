@@ -93,8 +93,8 @@ public class Buildings extends AppCompatActivity {
                 btnGuardar = mView1.findViewById(R.id.btnGuardar);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Buildings.this);
-                builder.setView(mView1).setTitle("Agregar un nuevo Cliente")
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setView(mView1).setTitle("Agregar un Nuevo Cliente")
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialog.dismiss();
@@ -117,11 +117,11 @@ public class Buildings extends AppCompatActivity {
                         monto = edtMonto.getText().toString();
 
                         if (nombre.equals("") && direccion.equals("") && celular.equals("") && mail.equals("") && descripcio_obra.equals("") && monto.equals("") ){
-                            Snackbar.make(view,"Espacios incompletos",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Campos Restantes",Snackbar.LENGTH_SHORT).show();
 
                         }else {
                             Save(nombre,direccion,celular,mail,descripcio_obra,monto,estado);
-                            Snackbar.make(view,"Saving",Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(view,"Guardando",Snackbar.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
                     }
@@ -147,7 +147,7 @@ public class Buildings extends AppCompatActivity {
             build.setEstado(state);
 
             dbfunctions.InsertBuilding(build);
-            Toast.makeText(this, "Guardado...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Registro Guardado", Toast.LENGTH_SHORT).show();
             fetchBuildingsRecords();
         }catch (Exception e){
             Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
@@ -199,7 +199,7 @@ public class Buildings extends AppCompatActivity {
                 }adapter.notifyDataSetChanged();
 
             }else {
-                Toast.makeText(Buildings.this, "No Records found.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Buildings.this, "No se Encontraron Registros", Toast.LENGTH_SHORT).show();
             }
 
         }
